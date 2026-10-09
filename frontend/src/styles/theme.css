@@ -1,0 +1,101 @@
+:root {
+  /* Core Base Colors - Light Surface Base */
+  --bg-color: #F5F7FF;
+  --bg-gradient: linear-gradient(135deg, #F5F7FF 0%, #EEF2FF 100%);
+  --text-primary: #0F172A;
+  --text-muted: #64748B;
+  --text-secondary: #475569;
+
+  /* Dual-Tone Dark Base (Sidebar, Dark Surfaces, Login Hero) */
+  --dark-base-start: #0B1120;
+  --dark-base-end: #1E2A47;
+  --dark-surface-gradient: linear-gradient(145deg, #0B1120 0%, #1E2A47 100%);
+
+  /* Signature Accent Duo (Electric Blue -> Violet) */
+  --accent-start: #4F7CFF;
+  --accent-end: #8B5CF6;
+  --accent-gradient: linear-gradient(135deg, #4F7CFF 0%, #8B5CF6 100%);
+  --accent-gradient-hover: linear-gradient(135deg, #3B68EF 0%, #7C4DEF 100%);
+  --accent-color: #4F7CFF;
+  --accent-glow: rgba(79, 124, 255, 0.25);
+
+  --primary-color: #4F7CFF;
+  --primary-hover: #3B68EF;
+  --secondary-color: #8B5CF6;
+  --secondary-hover: #7C4DEF;
+
+  /* Status Palette & Soft Tints (12-15% Opacity) */
+  --status-healthy: #00C897;
+  --status-healthy-bg: rgba(0, 200, 151, 0.14);
+  --status-healthy-glow: rgba(0, 200, 151, 0.25);
+
+  --status-due-soon: #F4B400;
+  --status-due-soon-bg: rgba(244, 180, 0, 0.14);
+  --status-due-soon-glow: rgba(244, 180, 0, 0.25);
+
+  --status-warranty: #FF9F43;
+  --status-warranty-bg: rgba(255, 159, 67, 0.14);
+  --status-warranty-glow: rgba(255, 159, 67, 0.25);
+
+  --status-overdue: #FF4D4F;
+  --status-overdue-bg: rgba(255, 77, 79, 0.14);
+  --status-overdue-glow: rgba(255, 77, 79, 0.25);
+
+  --status-critical: #C1121F;
+  --status-critical-bg: rgba(193, 18, 31, 0.15);
+  --status-critical-glow: rgba(193, 18, 31, 0.3);
+
+  /* Glass Surface System Tokens - Light Mode */
+  --glass-bg: rgba(255, 255, 255, 0.6);
+  --glass-card-bg: rgba(255, 255, 255, 0.65);
+  --sidebar-bg: rgba(255, 255, 255, 0.75);
+  --navbar-bg: rgba(255, 255, 255, 0.72);
+  --modal-bg: rgba(255, 255, 255, 0.85);
+  --input-bg: rgba(255, 255, 255, 0.7);
+  --input-border: rgba(79, 124, 255, 0.2);
+
+  --glass-border-color: rgba(255, 255, 255, 0.5);
+  --shadow-ambient: 0 2px 8px rgba(15, 23, 42, 0.08);
+  --shadow-diffused: 0 20px 40px rgba(79, 124, 255, 0.09);
+  --glass-shadow: var(--shadow-ambient), var(--shadow-diffused);
+  --inset-highlight: inset 0 1px 0 rgba(255, 255, 255, 0.4);
+
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 20px;
+  --radius-xl: 24px;
+}
+
+/* Dark Mode Overrides */
+[data-theme="dark"] {
+  --bg-color: #070C18;
+  --text-primary: #F8FAFC;
+  --text-muted: #94A3B8;
+  --text-secondary: #CBD5E1;
+
+  --glass-bg: rgba(15, 23, 42, 0.6);
+  --glass-card-bg: rgba(19, 30, 54, 0.6);
+  --sidebar-bg: rgba(11, 17, 32, 0.85);
+  --navbar-bg: rgba(11, 17, 32, 0.8);
+  --modal-bg: rgba(19, 30, 54, 0.9);
+  --input-bg: rgba(11, 17, 32, 0.65);
+  --input-border: rgba(139, 92, 246, 0.25);
+
+  --glass-border-color: rgba(255, 255, 255, 0.12);
+  --shadow-ambient: 0 4px 12px rgba(0, 0, 0, 0.4);
+  --shadow-diffused: 0 20px 45px rgba(79, 124, 255, 0.12);
+  --glass-shadow: var(--shadow-ambient), var(--shadow-diffused);
+  --inset-highlight: inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--bg-gradient);
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}

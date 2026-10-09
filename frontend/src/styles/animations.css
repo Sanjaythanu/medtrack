@@ -1,0 +1,142 @@
+/* Enterprise Motion & Micro-Interaction System */
+
+@keyframes floatBlob {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(40px, 60px) scale(1.1);
+  }
+  100% {
+    transform: translate(-30px, 30px) scale(0.95);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleInModal {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes backdropBlurIn {
+  from {
+    backdrop-filter: blur(0px);
+    background-color: rgba(11, 17, 32, 0);
+  }
+  to {
+    backdrop-filter: blur(12px);
+    background-color: rgba(11, 17, 32, 0.6);
+  }
+}
+
+@keyframes shimmerSweep {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes fillLeftToRight {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes shakeError {
+  0%, 100% { transform: translateX(0); }
+  20%, 60% { transform: translateX(-6px); }
+  40%, 80% { transform: translateX(6px); }
+}
+
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 77, 79, 0.5);
+  }
+  70% {
+    box-shadow: 0 0 0 12px rgba(255, 77, 79, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 77, 79, 0);
+  }
+}
+
+/* Motion Class Utilities */
+.fade-in-up {
+  animation: fadeInUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.modal-scale-in {
+  animation: scaleInModal 0.18s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.modal-backdrop-blur {
+  animation: backdropBlurIn 0.25s ease forwards;
+}
+
+.shimmer-skeleton {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.05) 25%,
+    rgba(79, 124, 255, 0.15) 50%,
+    rgba(255, 255, 255, 0.05) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmerSweep 1.5s ease-in-out infinite;
+  border-radius: 8px;
+}
+
+.shake-error {
+  animation: shakeError 0.4s ease-in-out;
+  border-color: var(--status-overdue) !important;
+  box-shadow: 0 0 0 4px rgba(255, 77, 79, 0.2) !important;
+}
+
+.glass-hover {
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease;
+}
+
+.glass-hover:hover {
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: 0 12px 30px rgba(79, 124, 255, 0.15);
+}
+
+/* Route Cross-Fade & Vertical Drift */
+.page-transition {
+  animation: fadeInUp 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Stagger Children Helper Delays */
+.stagger-children > *:nth-child(1) { animation-delay: 0ms; }
+.stagger-children > *:nth-child(2) { animation-delay: 50ms; }
+.stagger-children > *:nth-child(3) { animation-delay: 100ms; }
+.stagger-children > *:nth-child(4) { animation-delay: 150ms; }
+.stagger-children > *:nth-child(5) { animation-delay: 200ms; }
+.stagger-children > *:nth-child(6) { animation-delay: 250ms; }
+.stagger-children > *:nth-child(7) { animation-delay: 300ms; }
+.stagger-children > *:nth-child(8) { animation-delay: 350ms; }
+
+.pulse-critical {
+  animation: pulseGlow 2s infinite;
+}
+
